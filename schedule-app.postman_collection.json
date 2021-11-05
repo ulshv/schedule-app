@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "c36d7c51-0080-46f4-9a7e-eb02831c8672",
+		"name": "schedule-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Schedules",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-client-uuid",
+						"value": "be92e045-0e55-48ed-a407-b3b352c23cb4"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/schedules",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"schedules"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Schedules",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "x-client-uuid",
+						"value": "be92e045-0e55-48ed-a407-b3b352c23cb4"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Block social media\",\n    \"duration\": 2,\n    \"cron\": \"*/5 * * * * *\",\n    \"date\": 1636121214,\n    \"isRepeating\": true,\n    \"isActive\": true,\n    \"services\": [1,3,4]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/schedules",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"schedules"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH Schedules",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "x-client-uuid",
+						"value": "be92e045-0e55-48ed-a407-b3b352c23cb4"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"isActive\": true,\n    \"cron\": \"*/5 * * * * *\",\n    \"date\": 1636122947,\n    \"duration\": 10,\n    \"isRepeating\": false,\n    \"services\": [1, 3]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/schedules/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"schedules",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Schedules",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "x-client-uuid",
+						"value": "be92e045-0e55-48ed-a407-b3b352c23cb4"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/schedules/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"schedules",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Services",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/services",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"services"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Services",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "x-admin-token",
+						"value": "random_string"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Netflix\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/services",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"services"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
