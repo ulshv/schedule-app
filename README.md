@@ -41,6 +41,8 @@ Then, you can create a few Schedules using `POST http://localhost:3000/api/v1/sc
 }
 ```
 
+Note: `date` parameter is UNIX timestamp in seconds rather than milliseconds.
+
 ## Testing frontend app
 
 After running `npm start` in frontend folder it will open up a new tab with the webapp. Paste `client-uuid` and click start. App will perform regular updates and fetch latest data from the server. When Schedule meets blocking status it will be visible via `Blocking: true` text in the component.
