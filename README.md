@@ -40,8 +40,10 @@ Then, you can create a few Schedules using `POST http://localhost:3000/api/v1/sc
   "services": [1, 3, 4]
 }
 ```
-
-Note: `date` parameter is UNIX timestamp in seconds rather than milliseconds.
+Notes:
+`duration` is specified in seconds.
+`date` parameter is UNIX timestamp in seconds rather than milliseconds.
+`cron` is a CRON string. You can generate one on [this site](http://www.cronmaker.com/).
 
 ## Testing frontend app
 
