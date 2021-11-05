@@ -50,3 +50,9 @@ After running `npm start` in frontend folder it will open up a new tab with the 
 ## Help & troubleshooting
 
 If you have any questions regarding usage feel free to reach me out at sergey.ulyashev@gmail.com!
+
+## TODO
+
+Things to add later:
+- [ ] user input validation
+- [ ] errors handling
