@@ -8,6 +8,7 @@ export type TSchedule = {
   name: string
   duration: number
   cron: string
+  date: number
   isRepeating: boolean
   isActive: boolean
   services: TService[]

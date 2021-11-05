@@ -15,6 +15,7 @@ model Schedule {
   name        String    @db.VarChar(255)
   duration    Int
   cron        String    @db.VarChar(255)
+  date        Int
   isRepeating Boolean
   isActive    Boolean
   clientUuid  String    @db.VarChar(36) @default("")

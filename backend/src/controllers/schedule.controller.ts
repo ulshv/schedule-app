@@ -5,11 +5,6 @@ import { asyncMiddleware } from '../utils/async-middleware'
 export const scheduleController = Router()
 
 scheduleController.get('/', asyncMiddleware(async (req, res) => {
-  console.log({
-    where: { clientUuid: req.headers['x-client-uuid'] || '' },
-    include: { services: true }
-  });
-
   const schedules = await prisma.schedule.findMany({
     where: { clientUuid: req.headers['x-client-uuid'] || '' },
     include: { services: true }
