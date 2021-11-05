@@ -17,6 +17,7 @@ model Schedule {
   cron        String    @db.VarChar(255)
   isRepeating Boolean
   isActive    Boolean
+  clientUuid  String    @db.VarChar(36) @default("")
   services    Service[] @relation(references: [id])
 }
 

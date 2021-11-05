@@ -47,8 +47,8 @@ const Schedule = ({ schedule }: TProps) =>  {
   return (
     <div>
       <h4>{schedule.name}</h4>
-      isBlocking: <b><span style={{ color: isBlocking ? 'red' : 'green' }}>{isBlocking.toString()}</span></b><br/>
-      Blocking services: {schedule.services.map(s => s.name).join(', ')}
+      Blocking: <b><span style={{ color: isBlocking ? 'red' : 'green' }}>{isBlocking.toString()}</span></b><br/>
+      Services: {schedule.services.map(s => s.name).join(', ')}
     </div>
   )
 }
